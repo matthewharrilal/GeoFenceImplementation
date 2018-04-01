@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="GeoFenceImplementation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-l1-WzQ" customClass="Locatio">
+                                <rect key="frame" x="-10" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcr-8e-1Mj">
+                                <rect key="frame" x="77" y="617" width="221" height="40"/>
+                                <state key="normal" title="Calculate Area Coverage"/>
+                                <connections>
+                                    <action selector="calculateAreaCoverage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3E-vk-xxW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH4-AX-1XW">
+                                <rect key="frame" x="117" y="579" width="120" height="30"/>
+                                <state key="normal" title="Clear Pins"/>
+                                <connections>
+                                    <action selector="clearPins:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNq-JT-zcn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kcr-8e-1Mj" secondAttribute="trailing" constant="77" id="4xP-jJ-UEG"/>
+                            <constraint firstItem="Kcr-8e-1Mj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="7Q2-o4-uRj"/>
+                            <constraint firstItem="QL5-l1-WzQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8Z0-jt-WIh"/>
+                            <constraint firstItem="fH4-AX-1XW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="559" id="Dm2-dx-9aD"/>
+                            <constraint firstItem="Kcr-8e-1Mj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="597" id="HlA-a2-CMD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fH4-AX-1XW" secondAttribute="trailing" constant="138" id="N0t-fs-2HU"/>
+                            <constraint firstItem="fH4-AX-1XW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="Pr6-3b-UV9"/>
+                            <constraint firstItem="Kcr-8e-1Mj" firstAttribute="top" secondItem="fH4-AX-1XW" secondAttribute="bottom" constant="8" id="S4b-88-ceW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kcr-8e-1Mj" secondAttribute="bottom" constant="10" id="Wra-hw-8cq"/>
+                            <constraint firstItem="QL5-l1-WzQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XQ4-oB-Tag"/>
+                            <constraint firstItem="QL5-l1-WzQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bLt-Au-F8o"/>
+                            <constraint firstItem="Kcr-8e-1Mj" firstAttribute="top" secondItem="fH4-AX-1XW" secondAttribute="bottom" constant="8" id="eKL-3Z-wYL"/>
+                            <constraint firstItem="QL5-l1-WzQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jpZ-Ko-aBf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="QL5-l1-WzQ" id="J62-8n-vdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
